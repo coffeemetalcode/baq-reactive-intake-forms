@@ -11,17 +11,15 @@
 <body>
   <div class="container">
     <div class="row">
-      <h1>Bon Air Quilt Company Longarm Intake</h1>
+      <h2>Bon Air Quilt Company Longarm Intake</h2>
     </div>
   </div>
 
-  <!-- Personal information -->
   <div class="container">
-    <div class="row">
-      <h3>Personal / Mailing Info</h3>
-    </div>
+    <!-- Personal information -->
     <form action="">
-      <div class="row">
+      <h4>Personal / Mailing Info</h4>
+      <div class="form-row">
         <div class="col">
           <div class="form-group">
             <label for="name">Name</label>
@@ -29,21 +27,21 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
+      <div class="form-row">
+        <div class="col-md-6">
           <div class="form-group">
             <label for="phone">Phone</label>
             <input type="text" class="form-control" id="phone" placeholder="(123) 456-7890">
           </div>
         </div>
-        <div class="col">
+        <div class="col-md-6">
           <div class="form-group">
             <label for="email">Email</label>
             <input type="email" class="form-control" id="email" placeholder="first.lasterson@qmail.com">
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="form-row">
         <div class="col">
           <div class="form-group">
             <label for="address-1">Address 1</label>
@@ -51,7 +49,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="form-row">
         <div class="col">
           <div class="form-group">
             <label for="address-2">Address 2</label>
@@ -59,14 +57,14 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
+      <div class="form-row">
+        <div class="col-sm-4">
           <div class="form-group">
             <label for="city">City</label>
             <input type="text" class="form-control" id="city" placeholder="Mytown">
           </div>
         </div>
-        <div class="col">
+        <div class="col-sm-4">
           <div class="form-group">
             <label for="state">State</label>
             <select name="state" id="state" class="form-control">
@@ -77,16 +75,157 @@
             </select>
           </div>
         </div>
-        <div class="col">
+        <div class="col-sm-4">
           <div class="form-group">
             <label for="postal">Zip</label>
             <input type="text" class="form-control" id="postal" placeholder="92921">
           </div>
         </div>
       </div>
+      <hr />
+      <!-- Jobs Information -->
+      <h4>Details for Job 1</h4>
+      <h5>Required</h5>
+      <div class="form-row">
+        <div class="col-md-3">
+          <div class="form-group">
+            <label for="job-1-length">Length</label>
+            <input type="number" class="form-control" id="job-1-length" placeholder="93.50">
+            <small class="form-text text-muted">Enter length in inches</small>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label for="job-1-width">Width</label>
+            <input type="number" class="form-control" id="job-1-width" placeholder="93.50">
+            <small class="form-text text-muted">Enter width in inches</small>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label for="job-1-area">Area</label>
+            <input readonly type="number" class="form-control" id="job-1-area" placeholder="8,742.25">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label for="job-1-price">Price</label>
+            <input readonly type="number" class="form-control" id="job-1-price" placeholder="$0.025 / sq in">
+            <small class="form-text text-muted">Minimum base price is $50.00 / job</small>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="job-1-stitch">Stitch Pattern</label>
+            <select name="job-1-stitch" id="job-1-stitch" class="form-control">
+              <option value="stars">Stars</option>
+              <option value="mariposa">Mariposa</option>
+              <option value="frogs">Frogs</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="job-1-thread">Thread Color</label>
+            <select name="job-1-thread" id="job-1-thread" class="form-control">
+              <option value="black">Black</option>
+              <option value="blue">Blue</option>
+              <option value="red">Red</option>
+              <option value="white">White</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <h5>Options</h5>
+      <div class="form-row">
+        <div class="col-md-8">
+          <div class="form-group">
+            <label for="job-1-batting">Batting</label>
+            <select name="job-1-batting" id="job-1-batting" class="form-control">
+              <option value="provide">I will provide batting</option>
+              <option value="cotton-poly">80/20 Cotton / Polyester Blend</option>
+              <option value="cotton">100% Cotton</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="job-1-batting-price">Price</label>
+            <input readonly type="number" class="form-control" id="job-1-batting-price" placeholder="$10.00 / yd">
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="job-1-backing">Backing</label>
+            <select name="job-1-backing" id="job-1-backing" class="form-control">
+              <option value="provide">I will provide backing fabric</option>
+              <option value="purchase">Show me options from Bon Air Quilt Co.</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="job-1-backing-seams">Whole or Pieced?</label>
+            <select name="job-1-backing-seams" id="job-1-backing-seams" class="form-control">
+              <option value="1">Whole</option>
+              <option value="2">2 Pieces</option>
+              <option value="3">3 Pieces</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="job-1-backing-price">Price</label>
+            <input readonly type="number" class="form-control" placeholder="$10.00 / seam">
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="job-1-binding">Binding</label>
+            <select name="job-1-binding" id="job-1-binding" class="form-control">
+              <option value="provide">I will provide binding fabric</option>
+              <option value="purchase">Show me options from Bon Air Quilt Co.</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="job-1-binding-sewn">Cut and Sewn?</label>
+            <select name="job-1-binding-sewn" id="job-1-binding-sewn" class="form-control">
+              <option value="sew">Please sew my binding from pieces I provide</option>
+              <option value="cut-sew">Please cut and sew my binding from fabric I provide</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="job-1-binding-price">Price</label>
+            <input readonly type="number" class="form-control" placeholder="Up to $0.25 / in">
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-8"></div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="job-1-total">Total for Job 1 including batting, backing, and binding</label>
+            <input readonly type="number" class="form-control" placeholder="$50.00">
+          </div>
+        </div>
+      </div>
+      <hr />
+      <h4>Details for Job 2</h4>
+      <h5>Required</h5>
+      <h5>Options</h5>
     </form>
   </div>
-  
+
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
