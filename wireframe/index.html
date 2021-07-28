@@ -9,11 +9,19 @@
   <title>Bon Air Quilt Company Longarm Intake</title>
 </head>
 <body>
-  <div class="container">
+
+<nav class="navbar navbar-light bg-light">
+  <a href="#" class="navbar-brand">
+    <img src="./assets/images/logo-black-no-tag.png" style="float: left" width="45" height="auto" class="d-inline-block align-middle" alt="Bon Air Quilt Company">
+    <div style="padding: 6.5px 0 0 10px; float: left"><strong>Bon Air Quilt Company Longarm Intake</strong></div>
+  </a>
+</nav>
+
+  <!-- <div class="container">
     <div class="row">
       <h2>Bon Air Quilt Company Longarm Intake</h2>
     </div>
-  </div>
+  </div> -->
 
   <div class="container">
     <!-- Personal information -->
@@ -117,24 +125,34 @@
       </div>
       <div class="form-row">
         <div class="col-md-6">
-          <div class="form-group">
-            <label for="job-1-stitch">Stitch Pattern</label>
-            <select name="job-1-stitch" id="job-1-stitch" class="form-control">
+          <label for="job-1-stitch">Stitch Pattern</label>
+          <div class="input-group mb-3">
+            <!-- <select name="job-1-stitch" id="job-1-stitch" class="form-control">
               <option value="stars">Stars</option>
               <option value="mariposa">Mariposa</option>
               <option value="frogs">Frogs</option>
-            </select>
+            </select> -->
+            <!-- input with button triggered modal to select -->
+            <input readonly type="text" class="form-control" id="job-1-stitch">
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary" data-toggle="modal" data-target="#stitch-select-modal" type="button" id="job-1-stitch-select">Select</button>
+            </div>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="form-group">
-            <label for="job-1-thread">Thread Color</label>
-            <select name="job-1-thread" id="job-1-thread" class="form-control">
+          <label for="job-1-thread">Thread Color</label>
+          <div class="input-group mb-3">
+            <!-- <select name="job-1-thread" id="job-1-thread" class="form-control">
               <option value="black">Black</option>
               <option value="blue">Blue</option>
               <option value="red">Red</option>
               <option value="white">White</option>
-            </select>
+            </select> -->
+            <!-- input with button triggered modal to select -->
+            <input readonly type="text" class="form-control" id="job-1-thread">
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary" type="button" id="job-1-thread-select">Select</button>
+            </div>
           </div>
         </div>
       </div>
@@ -219,6 +237,14 @@
           </div>
         </div>
       </div>
+      <div class="form-row">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="job-1-comments">Comments or special instructions</label>
+            <textarea class="form-control" name="job-1-comments" id="job-1-comments" cols="30" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
       <hr />
       <h4>Details for Job 2</h4>
       <h5>Required</h5>
@@ -226,9 +252,67 @@
     </form>
   </div>
 
+  <div id="stitch-select-modal" tabindex="-1" class="modal fade" aria-labelledby="stitch-select-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Select Stitch Pattern</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <!-- See this example of card select -->
+            <!-- https://bbbootstrap.com/snippets/select-course-radio-options-card-59736723 -->
+
+            <div class="col-sm-4">
+              <div class="card bg-light mb-4">
+                <div class="card-body">
+                  <div class="card-title">Blustery Breeze</div>
+                  <img src="./assets/images/blustery-breeze.jpg" class="card-img-top img-fluid" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card bg-light mb-4">
+                <div class="card-body">
+                  <div class="card-title">Clover Edge to Edge</div>
+                  <img src="./assets/images/clover-edge-to-edge.jpg" class="card-img-top img-fluid" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card bg-light mb-4">
+                <div class="card-body">
+                  <div class="card-title">Feather Delight</div>
+                  <img src="./assets/images/feather-delight.jpg" class="card-img-top img-fluid" alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="card bg-light mb-4">
+                <div class="card-body">
+                  <div class="card-title">Field of Flowers</div>
+                  <img src="./assets/images/field-of-flowers.jpg" class="card-img-top img-fluid" alt="">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+  <script src="assets/javascript/intake.js"></script>
 </body>
 </html>
