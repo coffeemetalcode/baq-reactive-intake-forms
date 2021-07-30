@@ -76,10 +76,10 @@
           <div class="form-group">
             <label for="state">State</label>
             <select name="state" id="state" class="form-control">
-              <option value="az">AZ</option>
-              <option value="ca">CA</option>
-              <option value="va">VA</option>
-              <option value="wi">WI</option>
+              <!-- <option value="AZ">AZ</option>
+              <option value="CA">CA</option>
+              <option value="VA">VA</option>
+              <option value="WI">WI</option> -->
             </select>
           </div>
         </div>
@@ -127,11 +127,6 @@
         <div class="col-md-6">
           <label for="job-1-stitch">Stitch Pattern</label>
           <div class="input-group mb-3">
-            <!-- <select name="job-1-stitch" id="job-1-stitch" class="form-control">
-              <option value="stars">Stars</option>
-              <option value="mariposa">Mariposa</option>
-              <option value="frogs">Frogs</option>
-            </select> -->
             <!-- input with button triggered modal to select -->
             <input readonly type="text" class="form-control" id="job-1-stitch">
             <div class="input-group-append">
@@ -252,6 +247,7 @@
     </form>
   </div>
 
+  <!-- stitch select modal -->
   <div id="stitch-select-modal" tabindex="-1" class="modal fade" aria-labelledby="stitch-select-modal-label" aria-hidden="true">
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
@@ -259,11 +255,12 @@
           <h3>Select Stitch Pattern</h3>
         </div>
         <div class="modal-body">
-          <div class="row">
+          <div id="stitch-select-options" class="row">
             <!-- See this example of card select -->
             <!-- https://bbbootstrap.com/snippets/select-course-radio-options-card-59736723 -->
 
-            <div class="col-sm-4">
+            <!-- keep these cards until implement the select functionality -->
+            <!-- <div class="col-sm-4">
               <div class="card bg-light mb-4">
                 <div class="card-body">
                   <div class="card-title">Blustery Breeze</div>
@@ -279,25 +276,7 @@
                   <img src="./assets/images/clover-edge-to-edge.jpg" class="card-img-top img-fluid" alt="">
                 </div>
               </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card bg-light mb-4">
-                <div class="card-body">
-                  <div class="card-title">Feather Delight</div>
-                  <img src="./assets/images/feather-delight.jpg" class="card-img-top img-fluid" alt="">
-                </div>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="card bg-light mb-4">
-                <div class="card-body">
-                  <div class="card-title">Field of Flowers</div>
-                  <img src="./assets/images/field-of-flowers.jpg" class="card-img-top img-fluid" alt="">
-                </div>
-              </div>
-            </div>
+            </div> -->
 
           </div>
         </div>
