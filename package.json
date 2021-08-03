@@ -4,6 +4,7 @@
   "description": "Reactive, mobile responsive order flow for commissions and finishing services",
   "main": "index.js",
   "scripts": {
+    "server": "nodemon ./server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/dbstocker/baq-reactive-intake-forms/issues"
   },
-  "homepage": "https://github.com/dbstocker/baq-reactive-intake-forms#readme"
+  "homepage": "https://github.com/dbstocker/baq-reactive-intake-forms#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "express": "^4.17.1"
+  }
 }
