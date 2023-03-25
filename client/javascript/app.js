@@ -20,7 +20,7 @@ $(document).ready(() => {
   const stateAbbreviations = [ 'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY' ]; // 50 united states plus district of columbia
   
   // populate state select box with options
-  populateSelectBox('state', stateAbbreviations);
+  // populateSelectBox('state', stateAbbreviations);
 
   // set value of customer state
   $('#state').change(() => {
@@ -36,32 +36,18 @@ $(document).ready(() => {
 
   // devise a way to do this dynamically
   
-  const stitchPatterns = [
-    {
-      name: 'Blustery Breeze',
-      imgUrl: './assets/images/blustery-breeze.jpg'
-    },
-    {
-      name: 'Clover Edge to Edge',
-      imgUrl: './assets/images/clover-edge-to-edge.jpg'
-    },
-    {
-      name: 'Feather Delight',
-      imgUrl: './assets/images/feather-delight.jpg'
-    },
-    {
-      name: 'Field of Flowers',
-      imgUrl: './assets/images/field-of-flowers.jpg'
-    }
-  ];
-  
   // populate stitch pattern select dialog
-  populateSelectDialog('stitch-select-options', stitchPatterns);
+  let stitchPatterns = [];
+
+  $.when(getLongarmOptions()).done((result) => {
+    stitchPatterns = result.options.pantographs;
+    populateSelectDialog('stitch-select-options', stitchPatterns);
+  });
 
   // abstract function to populate selection modals with options from an input array
-  function populateSelectDialog(id, inputArr) {
+  function populateSelectDialog(dialogId, inputArr) {
     for (item of inputArr) {
-      $(`#${id}`)
+      $(`#${dialogId}`)
       .append(`<div class="col-sm-4">
         <div class="card bg-light mb-4">
           <div class="card-body">
@@ -110,5 +96,15 @@ $(document).ready(() => {
           .attr('value', item)
           .text(item));
     }
+  }
+
+  // GET longarm options
+  function getLongarmOptions() {
+    return $.ajax({
+      url: 'http://localhost:8085/api/longarm/options',
+      success: (data) => {
+        console.log(data);
+      }
+    })
   }
 });

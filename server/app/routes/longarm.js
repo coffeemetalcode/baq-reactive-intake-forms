@@ -5,8 +5,26 @@ const router = express.Router();
 /* mocks */
 const options = {
   pantographs: [
-    { id: 1, name: 'flowers', imgUrl: './flowers.jpg' },
-    { id: 2, name: 'turtles', imgUrl: './turtles.jpg' },
+    {
+      id: 1,
+      name: 'Blustery Breeze',
+      imgUrl: './assets/images/blustery-breeze.jpg',
+    },
+    {
+      id: 2,
+      name: 'Clover Edge to Edge',
+      imgUrl: './assets/images/clover-edge-to-edge.jpg',
+    },
+    {
+      id: 3,
+      name: 'Feather Delight',
+      imgUrl: './assets/images/feather-delight.jpg',
+    },
+    {
+      id: 4,
+      name: 'Field of Flowers',
+      imgUrl: './assets/images/field-of-flowers.jpg',
+    },
   ],
   threads: [
     { id: 1, color: 'gold varigated', imgUrl: './gold-varigated.jpg' },
