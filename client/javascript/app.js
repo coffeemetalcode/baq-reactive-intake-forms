@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(document).ready(function() {
   console.log('connected');
 
   /* variables */
@@ -34,11 +34,11 @@ $(document).ready(() => {
   // populate state select box with options
   populateSelectBox('state', stateAbbreviations);
 
-  $('#customer-details').change(() => {
+  $('#customer-details').change(function() {
     customer = updateCustomer();
   });
 
-  $('#job-1-details').change(() => {
+  $('#job-1-details').change(function() {
     console.log('job 1 state change');
     job1 = updateJob();
     updatePrice(job1.length, job1.width);
@@ -83,22 +83,29 @@ $(document).ready(() => {
   
   /* functions */
 
-
   // abstract function to populate selection modals with options from an input array
   function populateSelectDialog(dialogId, inputArr) {
     for (item of inputArr) {
       $(`#${dialogId}`)
       .append(`<div class="col-sm-4">
         <div class="card bg-light mb-4">
-          <div class="card-body">
+          <div id=${item.id} class="card-body radio">
             <div class="card-title">${item.name}</div>
             <img src="${item.imgUrl}" class="card-img-top img-fluid" alt="">
           </div>
         </div>
       </div>`);
     }
-  }
 
+    $('.card-body').click(function() {
+      let id = $(this).attr('id');
+      console.log(id);
+      $('.selected .fa').removeClass('fa-check');
+      $('.radio').removeClass('selected');
+      $(this).addClass('selected');
+    });
+  }
+  
   // abstract function to populate select boxes with options from an input array
   function populateSelectBox(id, inputArr) {
     for (item of inputArr) {
