@@ -27,8 +27,9 @@ const options = {
     },
   ],
   threads: [
-    { id: 1, color: 'gold varigated', imgUrl: './gold-varigated.jpg' },
-    { id: 2, color: 'brown', imgUrl: './brown.jpg' },
+    { id: 1, name: 'Khaki', imgUrl: './assets/images/khaki.webp' },
+    { id: 2, name: 'Royal', imgUrl: './assets/images/royal.webp' },
+    { id: 3, name: 'Green', imgUrl: './assets/images/green.webp'}
   ],
   backing: [
     {

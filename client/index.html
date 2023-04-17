@@ -26,217 +26,211 @@
   <div class="container">
     <!-- Personal information -->
     <form action="">
-      <h4>Personal / Mailing Info</h4>
-      <div class="form-row">
-        <div class="col">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="First Lasterson">
+      <div id="customer-details">
+        <h4>Personal / Mailing Info</h4>
+        <div class="form-row">
+          <div class="col">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="First Lasterson">
+            </div>
           </div>
         </div>
-      </div>
-      <div class="form-row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="text" class="form-control" id="phone" placeholder="(123) 456-7890">
+        <div class="form-row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="text" class="form-control" id="phone" placeholder="(123) 456-7890">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="first.lasterson@qmail.com">
+            </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="first.lasterson@qmail.com">
+        <div class="form-row">
+          <div class="col">
+            <div class="form-group">
+              <label for="address-1">Address 1</label>
+              <input type="text" class="form-control" id="address-1" placeholder="456 Any Street">
+            </div>
           </div>
         </div>
-      </div>
-      <div class="form-row">
-        <div class="col">
-          <div class="form-group">
-            <label for="address-1">Address 1</label>
-            <input type="text" class="form-control" id="address-1" placeholder="456 Any Street">
+        <div class="form-row">
+          <div class="col">
+            <div class="form-group">
+              <label for="address-2">Address 2</label>
+              <input type="text" class="form-control" id="address-2" placeholder="Attn: Heather">
+            </div>
           </div>
         </div>
-      </div>
-      <div class="form-row">
-        <div class="col">
-          <div class="form-group">
-            <label for="address-2">Address 2</label>
-            <input type="text" class="form-control" id="address-2" placeholder="Attn: Heather">
+        <div class="form-row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" class="form-control" id="city" placeholder="Mytown">
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="col-sm-4">
-          <div class="form-group">
-            <label for="city">City</label>
-            <input type="text" class="form-control" id="city" placeholder="Mytown">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="state">State</label>
+              <select name="state" id="state" class="form-control">
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="form-group">
-            <label for="state">State</label>
-            <select name="state" id="state" class="form-control">
-              <!-- <option value="AZ">AZ</option>
-              <option value="CA">CA</option>
-              <option value="VA">VA</option>
-              <option value="WI">WI</option> -->
-            </select>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="form-group">
-            <label for="postal">Zip</label>
-            <input type="text" class="form-control" id="postal" placeholder="92921">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="postal">Zip</label>
+              <input type="text" class="form-control" id="postal" placeholder="92921">
+            </div>
           </div>
         </div>
       </div>
       <hr />
       <!-- Jobs Information -->
-      <h4>Details for Job 1</h4>
-      <h5>Required</h5>
-      <div class="form-row">
-        <div class="col-md-3">
-          <div class="form-group">
-            <label for="job-1-length">Length</label>
-            <input type="number" class="form-control" id="job-1-length" placeholder="93.50">
-            <small class="form-text text-muted">Enter length in inches</small>
+      <div id="job-1-details">
+        <h4>Details for Job 1</h4>
+        <h5>Required</h5>
+        <div class="form-row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="job-1-length">Length</label>
+              <input type="number" class="form-control" id="job-1-length" placeholder="93.50">
+              <small class="form-text text-muted">Enter length in inches</small>
+            </div>
           </div>
-        </div>
-        <div class="col-md-3">
-          <div class="form-group">
-            <label for="job-1-width">Width</label>
-            <input type="number" class="form-control" id="job-1-width" placeholder="93.50">
-            <small class="form-text text-muted">Enter width in inches</small>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="job-1-width">Width</label>
+              <input type="number" class="form-control" id="job-1-width" placeholder="93.50">
+              <small class="form-text text-muted">Enter width in inches</small>
+            </div>
           </div>
-        </div>
-        <div class="col-md-3">
-          <div class="form-group">
-            <label for="job-1-area">Area</label>
-            <input readonly type="number" class="form-control" id="job-1-area" placeholder="8,742.25">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="job-1-area">Area</label>
+              <input readonly type="number" class="form-control" id="job-1-area" placeholder="8,742.25">
+            </div>
           </div>
-        </div>
-        <div class="col-md-3">
-          <div class="form-group">
-            <label for="job-1-price">Price</label>
-            <input readonly type="number" class="form-control" id="job-1-price" placeholder="$0.025 / sq in">
-            <small class="form-text text-muted">Minimum base price is $50.00 / job</small>
-          </div>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="col-md-6">
-          <label for="job-1-stitch">Stitch Pattern</label>
-          <div class="input-group mb-3">
-            <!-- input with button triggered modal to select -->
-            <input readonly type="text" class="form-control" id="job-1-stitch">
-            <div class="input-group-append">
-              <button class="btn btn-outline-primary" data-toggle="modal" data-target="#stitch-select-modal" type="button" id="job-1-stitch-select">Select</button>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="job-1-price">Price</label>
+              <input readonly type="string" class="form-control" id="job-1-price" placeholder="$0.025 / sq in">
+              <small class="form-text text-muted">Minimum base price is $50.00 / job</small>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <label for="job-1-thread">Thread Color</label>
-          <div class="input-group mb-3">
-            <!-- <select name="job-1-thread" id="job-1-thread" class="form-control">
-              <option value="black">Black</option>
-              <option value="blue">Blue</option>
-              <option value="red">Red</option>
-              <option value="white">White</option>
-            </select> -->
-            <!-- input with button triggered modal to select -->
-            <input readonly type="text" class="form-control" id="job-1-thread">
-            <div class="input-group-append">
-              <button class="btn btn-outline-primary" type="button" id="job-1-thread-select">Select</button>
+        <div class="form-row">
+          <div class="col-md-6">
+            <label for="job-1-stitch">Stitch Pattern</label>
+            <div class="input-group mb-3">
+              <!-- input with button triggered modal to select -->
+              <input readonly type="text" class="form-control" id="job-1-stitch">
+              <div class="input-group-append">
+                <button class="btn btn-outline-primary" data-toggle="modal" data-target="#stitch-select-modal" type="button" id="job-1-stitch-select">Select</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="job-1-thread">Thread Color</label>
+            <div class="input-group mb-3">
+              <!-- input with button triggered modal to select -->
+              <input readonly type="text" class="form-control" id="job-1-thread">
+              <div class="input-group-append">
+                <button class="btn btn-outline-primary" data-toggle="modal" data-target="#thread-select-modal" type="button" id="job-1-thread-select">Select</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <h5>Options</h5>
-      <div class="form-row">
-        <div class="col-md-8">
-          <div class="form-group">
-            <label for="job-1-batting">Batting</label>
-            <select name="job-1-batting" id="job-1-batting" class="form-control">
-              <option value="provide">I will provide batting</option>
-              <option value="cotton-poly">80/20 Cotton / Polyester Blend</option>
-              <option value="cotton">100% Cotton</option>
-            </select>
+        <h5>Options</h5>
+        <div class="form-row">
+          <div class="col-md-8">
+            <div class="form-group">
+              <label for="job-1-batting">Batting</label>
+              <select name="job-1-batting" id="job-1-batting" class="form-control">
+                <option value="provided">I will provide batting</option>
+                <option value="cotton-poly">80/20 Cotton / Polyester Blend</option>
+                <option value="cotton">100% Cotton</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="job-1-batting-price">Price</label>
+              <input readonly type="number" class="form-control" id="job-1-batting-price" placeholder="$12.50 / yd">
+            </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="form-group">
-            <label for="job-1-batting-price">Price</label>
-            <input readonly type="number" class="form-control" id="job-1-batting-price" placeholder="$10.00 / yd">
+        <div class="form-row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="job-1-backing">Backing</label>
+              <select name="job-1-backing" id="job-1-backing" class="form-control">
+                <option value="provided">I will provide backing fabric</option>
+                <option value="purchase">Show me options from Bon Air Quilt Co.</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="job-1-backing-seams">Whole or Pieced?</label>
+              <select name="job-1-backing-seams" id="job-1-backing-seams" class="form-control">
+                <option value="1">Whole</option>
+                <option value="2">2 Pieces</option>
+                <option value="3">3 Pieces</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="job-1-backing-price">Price</label>
+              <input readonly type="number" class="form-control" placeholder="$12.00 / seam">
+            </div>
           </div>
         </div>
-      </div>
-      <div class="form-row">
-        <div class="col-md-4">
-          <div class="form-group">
-            <label for="job-1-backing">Backing</label>
-            <select name="job-1-backing" id="job-1-backing" class="form-control">
-              <option value="provide">I will provide backing fabric</option>
-              <option value="purchase">Show me options from Bon Air Quilt Co.</option>
-            </select>
+        <div class="form-row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="job-1-binding">Binding</label>
+              <select name="job-1-binding" id="job-1-binding" class="form-control">
+                <option value="provide">I will provide binding fabric</option>
+                <option value="purchase">Show me options from Bon Air Quilt Co.</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="job-1-binding-sewn">Cut and Sewn?</label>
+              <select name="job-1-binding-sewn" id="job-1-binding-sewn" class="form-control">
+                <option value="sew">Please sew my binding from pieces I provide</option>
+                <option value="cut-sew">Please cut and sew my binding from fabric I provide</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="job-1-binding-price">Price</label>
+              <input readonly type="number" class="form-control" placeholder="Up to $0.25 / in">
+            </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="form-group">
-            <label for="job-1-backing-seams">Whole or Pieced?</label>
-            <select name="job-1-backing-seams" id="job-1-backing-seams" class="form-control">
-              <option value="1">Whole</option>
-              <option value="2">2 Pieces</option>
-              <option value="3">3 Pieces</option>
-            </select>
+        <div class="form-row">
+          <div class="col-md-8"></div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="job-1-total">Total for Job 1 including batting, backing, and binding</label>
+              <input readonly type="number" class="form-control" placeholder="$50.00">
+            </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="form-group">
-            <label for="job-1-backing-price">Price</label>
-            <input readonly type="number" class="form-control" placeholder="$10.00 / seam">
-          </div>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="col-md-4">
-          <div class="form-group">
-            <label for="job-1-binding">Binding</label>
-            <select name="job-1-binding" id="job-1-binding" class="form-control">
-              <option value="provide">I will provide binding fabric</option>
-              <option value="purchase">Show me options from Bon Air Quilt Co.</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="form-group">
-            <label for="job-1-binding-sewn">Cut and Sewn?</label>
-            <select name="job-1-binding-sewn" id="job-1-binding-sewn" class="form-control">
-              <option value="sew">Please sew my binding from pieces I provide</option>
-              <option value="cut-sew">Please cut and sew my binding from fabric I provide</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="form-group">
-            <label for="job-1-binding-price">Price</label>
-            <input readonly type="number" class="form-control" placeholder="Up to $0.25 / in">
-          </div>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="col-md-8"></div>
-        <div class="col-md-4">
-          <div class="form-group">
-            <label for="job-1-total">Total for Job 1 including batting, backing, and binding</label>
-            <input readonly type="number" class="form-control" placeholder="$50.00">
-          </div>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="col-12">
-          <div class="form-group">
-            <label for="job-1-comments">Comments or special instructions</label>
-            <textarea class="form-control" name="job-1-comments" id="job-1-comments" cols="30" rows="3"></textarea>
+        <div class="form-row">
+          <div class="col-12">
+            <div class="form-group">
+              <label for="job-1-comments">Comments or special instructions</label>
+              <textarea class="form-control" name="job-1-comments" id="job-1-comments" cols="30" rows="3"></textarea>
+            </div>
           </div>
         </div>
       </div>
@@ -255,7 +249,7 @@
           <h3>Select Stitch Pattern</h3>
         </div>
         <div class="modal-body">
-          <div id="stitch-select-options" class="row">
+          <div id="stitch-select-options" class="row radio-group">
             <!-- See this example of card select -->
             <!-- https://bbbootstrap.com/snippets/select-course-radio-options-card-59736723 -->
 
@@ -282,7 +276,27 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button id="stitch-save" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- thread select modal -->
+  <div id="thread-select-modal" tabindex="-1" class="modal fade" aria-labelledby="thread-select-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Select Thread Color</h3>
+        </div>
+        <div class="modal-body">
+          <div id="thread-select-options" class="row radio-group">
+            
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button id="thread-save" type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
         </div>
       </div>
     </div>
