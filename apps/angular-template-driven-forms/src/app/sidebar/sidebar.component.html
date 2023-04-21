@@ -1,0 +1,26 @@
+<div class="offcanvas-header">
+  <h5 class="offcanvas-title">Offcanvas</h5>
+  <button
+    type="button"
+    class="btn-close text-reset"
+    aria-label="Close"
+    (click)="sidebar.dismiss('Cross click')"
+  ></button>
+</div>
+<div class="offcanvas-body">
+  <ul>
+    <li class="nav-item">
+      <a routerLink="/login" class="nav-link">
+        <i class="bi bi-person-fill"></i>
+        <span> Login</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a routerLink="/cart" class="nav-link">
+        <i class="bi bi-cart-fill"></i>
+        <span> Shopping Cart</span>
+      </a>
+    </li>
+  </ul>
+</div>
