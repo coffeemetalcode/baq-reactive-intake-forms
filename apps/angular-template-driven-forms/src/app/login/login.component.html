@@ -2,42 +2,79 @@
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">Login</h5>
-      <form action="" class="login-form" #loginForm="ngForm">
+      <form
+        class="login-form"
+        #loginForm="ngForm"
+        [class.was-validatedd]="loginForm.touched && loginForm.invalid"
+        (ngSubmit)="login(loginForm, $event)">
         
         <div class="mb-3">
           <label for="formEmail" class="form-label">Email Address</label>
           <input
-            ngModel
+            [(ngModel)]="formValue.email"
             name="email"
             type="email"
             class="form-control"
             id="login-email"
             placeholder="name@domain.com"
             required
-            #email="ngModel">
+            #email="ngModel"
+            [class.is-valid]="email.valid"
+            [class.is-invalid]="email.invalid">
+          
+          <div
+            class="invalid-feedback"
+            *ngIf="email.errors?.['required']">Please enter a valid email address</div>
         </div>
 
         <div class="mb-3">
           <label for="formPassword" class="form-label">Password</label>
           <input
-            ngModel
+            [(ngModel)]="formValue.password"
             name="password"
             type="password"
             class="form-control"
             id="login-password"
             placeholder="password"
             required
-            #password="ngModel">
+            minlength="8"
+            passwordStrength
+            #password="ngModel"
+            [class.is-valid]="password.valid"
+            [class.is-invalid]="password.invalid">
+            <!-- letters, min 1 number, min 1 character -->
+            <!-- pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" -->
+            
+          <div
+            class="invalid-feedback"
+            *ngIf="password.errors?.['required']">Please enter a password</div>
+
+          <div
+            class="invalid-feedback"
+            *ngIf="password.errors?.['minlength']">Must have at least 8 characters</div>
+
+          <!-- <div
+            class="invalid-feedback"
+            *ngIf="password.errors?.['pattern']">Must contain 1 number and 1 special character</div> -->
+
+            <div
+            class="invalid-feedback"
+            *ngIf="password.errors?.['passwordStrength']">Must contain uppercase, lowercase, and numeric characters</div>
         </div>
         
         <div class="d-grid">
-          <button class="btn btn-primary" type="button" (click)="login(loginForm)">Login</button>
+          <!-- type must not be type="button" here for ngSubmit to work -->
+          <button
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="!loginForm.valid"
+            >Login</button>
         </div>
 
       </form>
 
       <div class="form-val">
-        {{ email.valid }}
+        {{ password.errors | json }}
       </div>
     </div>
   </div>

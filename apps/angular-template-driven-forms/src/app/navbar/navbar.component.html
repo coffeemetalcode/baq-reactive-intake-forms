@@ -1,13 +1,14 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
   <div class="container-fluid">
-    <!-- <a class="navbar-brand" href="#">
-      <h1>Angular Bootstrap</h1>
-    </a> -->
+    <a class="navbar-brand" href="#">
+      <h1>QUILTING ADVENTURES</h1>
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- <img [src]="NAV_LOGO" alt="Quilting Adventures"> -->
         <li class="nav-item">
           <!-- <button type="button" class="btn btn-dark" (click)="toggleSidebar()">Go</button> -->
         </li>
@@ -15,11 +16,11 @@
           <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" routerLink="/quilt-job-calculator">Estimator</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
+        </li> -->
       </ul>
 
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -37,6 +38,7 @@
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" routerLink="/account">Account</a></li>
             <li><a class="dropdown-item" routerLink="/history">Order History</a></li>
+            <li><a class="dropdown-item" routerLink="/quilt-job-calculator">Estimator</a></li>
           </ul>
         </li>
       </ul>

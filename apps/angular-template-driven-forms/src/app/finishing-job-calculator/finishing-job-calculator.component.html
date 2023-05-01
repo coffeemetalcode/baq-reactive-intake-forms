@@ -1,0 +1,240 @@
+<form
+  #quiltJobForm="ngForm"
+  class="quilt-job-form"
+  (ngSubmit)="handleNextStep(quiltJobForm)">
+  
+  <div id="job-1-details" style="margin-top: 15px;">
+    <h4>Quilt Job Estimator</h4>
+    <h5>Required</h5>
+    <div class="row">
+      <div class="col-md">
+        <div class="form-group">
+          <label for="length">Length</label>
+          <input
+            [(ngModel)]="formValue.length"
+            (ngModelChange)="calculateJob()"
+            type="number"
+            class="form-control"
+            id="length"
+            name="length"
+            placeholder="93.50"
+            #length="ngModel"
+            >
+          <small class="form-text text-muted">Enter length in inches</small>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="form-group">
+          <label for="width">Width</label>
+          <input
+            [(ngModel)]="formValue.width"
+            (ngModelChange)="calculateJob()"
+            type="number"
+            class="form-control"
+            id="width"
+            name="width"
+            placeholder="93.50"
+            #width="ngModel">
+          <small class="form-text text-muted">Enter width in inches</small>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="form-group">
+          <label for="area">Area</label>
+          <input
+            [ngModel]="area | number:'1.2-2'"
+            disabled
+            readonly
+            type="text"
+            class="form-control"
+            id="area"
+            name="area"
+            placeholder="8,742.25">
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="form-group">
+          <label for="area-price">Price</label>
+          <input
+            [ngModel]="areaPrice | currency"
+            disabled
+            readonly
+            type="text"
+            class="form-control"
+            id="area-price"
+            name="area-price"
+            placeholder="$0.025 / sq in">
+          <small class="form-text text-muted">Minimum base price is $50.00 / job</small>
+        </div>
+      </div>
+    </div>
+  
+    <h5>Options</h5>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="form-group">
+          <label for="batting">Batting</label>
+          <select
+            [(ngModel)]="formValue.batting"
+            (ngModelChange)="calculateJob()"
+            name="batting"
+            id="batting"
+            class="form-select">
+            <option default value="provided">I will provide batting</option>
+            <option value="cotton-poly">80/20 Cotton / Polyester Blend</option>
+            <option value="cotton">100% Cotton</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="batting-price">Price</label>
+          <input
+            [ngModel]="battingPrice | currency"
+            disabled
+            readonly
+            type="text"
+            class="form-control"
+            name="batting-price"
+            id="batting-price"
+            placeholder="$12.50 / yd">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="backing">Backing</label>
+          <select
+            [(ngModel)]="formValue.backing.provided"
+            (ngModelChange)="calculateJob()"
+            name="backing"
+            id="backing"
+            class="form-select">
+            <option default value="provided">I will provide backing fabric</option>
+            <option value="purchase">I will select an option from QA</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="backing-seams">Whole or Pieced?</label>
+          <select
+            [(ngModel)]="formValue.backing.pieced"
+            (ngModelChange)="calculateJob()"
+            name="backing-seams"
+            id="backing-seams"
+            class="form-select">
+            <option default value="0">Whole</option>
+            <option value="1">2 Pieces (1 Seam)</option>
+            <option value="2">3 Pieces (2 Seams)</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="backing-price">Price</label>
+          <input
+            [ngModel]="backingPrice | currency"
+            disabled
+            readonly
+            type="text"
+            class="form-control"
+            name="backing-price"
+            id="backing-price"
+            placeholder="$12.00 / seam">
+        </div>
+      </div>
+    </div>
+
+    <!-- No Binding -->
+    <!-- <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="job-1-binding">Binding</label>
+          <select name="job-1-binding" id="job-1-binding" class="form-select">
+            <option value="provide">I will provide binding fabric</option>
+            <option value="purchase">Show me options from Bon Air Quilt Co.</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="job-1-binding-sewn">Cut and Sewn?</label>
+          <select name="job-1-binding-sewn" id="job-1-binding-sewn" class="form-select">
+            <option value="sew">Please sew my binding from pieces I provide</option>
+            <option value="cut-sew">Please cut and sew my binding from fabric I provide</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="job-1-binding-price">Price</label>
+          <input disabled readonly type="number" class="form-control" placeholder="Up to $0.25 / in">
+        </div>
+      </div>
+    </div> -->
+
+    <div class="row">
+      <div class="col-md-8">
+        <label for="instruction">Important Information</label>
+        <p name="instructions" id="instructions">
+          Please ensure any provided backing and batting measure {{ (formValue.length + 8) | number:'1.2-2' }} x {{ (formValue.width + 8) | number:'1.2-2' }}.
+        </p>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="row">
+          <div class="form-group">
+            <label for="sales-tax">Estimated Sales Tax</label>
+            <input
+              [ngModel]="salesTax | currency"
+              disabled
+              readonly
+              type="text"
+              class="form-control"
+              name="sales-tax"
+              id="sales-tax"
+              placeholder="$0.00">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="total">Total for Job 1 including batting, backing, and binding</label>
+            <input
+              [ngModel]="jobPrice | currency"
+              disabled
+              readonly
+              type="text"
+              class="form-control"
+              name="job-price"
+              id="job-price"
+              placeholder="$50.00">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="row justify-content-end">
+    </div>
+
+    <div class="row justify-content-end">
+      <div class="col-md-4">
+      </div>
+    </div> -->
+
+    <!-- <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label for="job-1-comments">Comments or special instructions</label>
+          <textarea class="form-control" name="job-1-comments" id="job-1-comments" cols="30" rows="3"></textarea>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</form>
+<hr />
+<div class="form-val">
+  {{ quiltJobForm.value | json }}
+</div>
