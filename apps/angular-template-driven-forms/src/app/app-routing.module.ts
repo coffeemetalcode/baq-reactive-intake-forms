@@ -6,6 +6,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { HomeComponent } from './home/home.component';
 import { OrdersComponent } from './orders/orders.component';
 import { AccountComponent } from './account/account.component';
+import { FinishingJobCalculatorComponent } from './finishing-job-calculator/finishing-job-calculator.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'cart',
     component: ShoppingCartComponent
+  },
+  {
+    path: 'quilt-job-calculator',
+    component: FinishingJobCalculatorComponent
   },
   {
     path: '**',

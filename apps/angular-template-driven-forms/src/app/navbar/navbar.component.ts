@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  NAV_LOGO = './assets/brand/qa-color-white-png';
 
 }
