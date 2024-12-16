@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  NAV_LOGO = './assets/brand/qa-color-white-png';
+  NAV_LOGO = 'https://github.com/dbstocker/baq-reactive-intake-forms/blob/54c221e80b5f4a7c018a03293e7ee7a99eb75dd5/apps/angular-template-driven-forms/src/assets/brand/qa-color-white.png';
 
 }
